@@ -1,6 +1,6 @@
 {
   "name": "@bevry/file-url-to-path",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert a file: URL to its path",
   "homepage": "https://github.com/bevry/file-url-to-path",
   "license": "Artistic-2.0",

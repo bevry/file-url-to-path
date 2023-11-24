@@ -52,7 +52,7 @@ Convert a file: URL to its path
 
 ``` html
 <script type="module">
-    import pkg from '//cdn.skypack.dev/@bevry/file-url-to-path@^1.0.0'
+    import pkg from '//cdn.skypack.dev/@bevry/file-url-to-path@^1.0.1'
 </script>
 ```
 
@@ -60,7 +60,7 @@ Convert a file: URL to its path
 
 ``` html
 <script type="module">
-    import pkg from '//unpkg.com/@bevry/file-url-to-path@^1.0.0'
+    import pkg from '//unpkg.com/@bevry/file-url-to-path@^1.0.1'
 </script>
 ```
 
@@ -68,7 +68,7 @@ Convert a file: URL to its path
 
 ``` html
 <script type="module">
-    import pkg from '//dev.jspm.io/@bevry/file-url-to-path@1.0.0'
+    import pkg from '//dev.jspm.io/@bevry/file-url-to-path@1.0.1'
 </script>
 ```
 
