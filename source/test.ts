@@ -7,7 +7,7 @@ import fileURLToPath from './index.js'
 
 const fixtures = [
 	{ args: ['file:/path', '/'], result: '/path' },
-	{ args: ['file:/path', '\\'], result: '\\\\localhost\\path' },
+	{ args: ['file:/path', '\\'], errorCode: 'ERR_INVALID_FILE_URL_PATH' },
 
 	{ args: ['file://localhost/path', '\\'], result: '\\\\localhost\\path' },
 	{ args: ['file://hostname/path', '\\'], result: '\\\\hostname\\path' },

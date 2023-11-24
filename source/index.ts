@@ -36,7 +36,10 @@ export default function fileURLToPath(href: string, separator: string): string {
 			file = separator + separator + href.substring(7)
 		} else if (href.startsWith('file:/')) {
 			// is full path with unknown drive letter
-			file = separator + separator + 'localhost' + separator + href.substring(6)
+			// conform with Node.js fileURLToPath
+			const error = new Error('File URL path must be absolute') as any
+			error.code = 'ERR_INVALID_FILE_URL_PATH'
+			throw error
 		} else {
 			file = href
 		}
