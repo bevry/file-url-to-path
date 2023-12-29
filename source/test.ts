@@ -2,7 +2,7 @@ import { equal } from 'assert-helpers'
 import kava from 'kava'
 
 import { sep } from 'path'
-import { fileURLToPath as fileURLToPathNode } from 'url'
+import * as url from 'url' // compat with node <8
 import fileURLToPath from './index.js'
 
 const fixtures = [
@@ -74,8 +74,8 @@ kava.suite('file-url-to-path', function (suite, test) {
 				const actual = fileURLToPath(fixture.args[0], fixture.args[1])
 				equal(actual, fixture.result, 'result was as expected')
 			}
-			// node.js test
-			if (fixture.args[1] === sep) {
+			// node.js test if available
+			if (url.fileURLToPath != null && fixture.args[1] === sep) {
 				if (fixture.errorCode) {
 					let ourCode, nodeCode
 					try {
@@ -84,14 +84,14 @@ kava.suite('file-url-to-path', function (suite, test) {
 						ourCode = error.code
 					}
 					try {
-						fileURLToPathNode(fixture.args[0])
+						url.fileURLToPath(fixture.args[0])
 					} catch (error: any) {
 						nodeCode = error.code
 					}
 					equal(ourCode, nodeCode, 'error code was same as Node.js')
 				} else {
 					const ourResult = fileURLToPath(fixture.args[0], fixture.args[1])
-					const nodeResult = fileURLToPathNode(fixture.args[0])
+					const nodeResult = url.fileURLToPath(fixture.args[0])
 					equal(ourResult, nodeResult, 'result was as same as Node.js')
 				}
 			}

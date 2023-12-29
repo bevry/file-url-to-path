@@ -69,7 +69,7 @@ export default function fileURLToPath(href: string, separator: string): string {
 			// is host path, e.g. file://localhost/foo
 			if (!href.startsWith('file://localhost/')) {
 				const error = new Error(
-					'File URL host must be "localhost" or empty'
+					'File URL host must be "localhost" or empty',
 				) as any
 				error.code = 'ERR_INVALID_FILE_URL_HOST'
 				throw error

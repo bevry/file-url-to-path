@@ -1,16 +1,16 @@
 <!-- LICENSEFILE/ -->
 
-<h1>License</h1>
+# License
 
 Unless stated otherwise all works are:
 
-<ul><li>Copyright &copy; 2023+ <a href="https://github.com/balupton">Benjamin Lupton</a></li></ul>
+-   Copyright &copy; 2023+ [Benjamin Lupton](https://balupton.com)
 
 and licensed under:
 
-<ul><li><a href="http://spdx.org/licenses/Artistic-2.0.html">Artistic License 2.0</a></li></ul>
+-   [Artistic License 2.0](http://spdx.org/licenses/Artistic-2.0.html)
 
-<h2>The Artistic License 2.0</h2>
+## The Artistic License 2.0
 
 <pre>
 Copyright (c) 2000-2006, The Perl Foundation.
